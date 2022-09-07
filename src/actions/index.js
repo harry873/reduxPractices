@@ -1,3 +1,4 @@
+////////////////////////////////////////////////// Counter APP
 // export const incNumber = () => {
 //   return {
 //     type: "INCREMENT",
@@ -16,33 +17,51 @@
 //   };
 // };
 
-export const addTodo = (data) => {
-  console.log(data);
+////////////////////////////////////////////////// TODO APP
 
+// export const addTodo = (data) => {
+//   console.log(data);
+
+//   return {
+//     type: "ADDTODO",
+//     payload: {
+//       id: new Date().getTime().toString(),
+//       data,
+//     },
+//   };
+// };
+
+// export const deleteTodo = (id) => {
+//   return {
+//     type: "DELETETODO",
+//     id,
+//   };
+// };
+// export const updateTodo = (id, data) => {
+//   return {
+//     type: "UPDATETODO",
+//     id,
+//     data
+//   };
+// };
+// export const removeTodo = () => {
+//   return {
+//     type: "REMOVETODO",
+//   };
+// };
+
+// //////////////////////////////////    APIs
+
+export const setProduct = (product) => {
   return {
-    type: "ADDTODO",
-    payload: {
-      id: new Date().getTime().toString(),
-      data,
-    },
+    type: "SETPRODUCT",
+    payload: product,
   };
 };
 
-export const deleteTodo = (id) => {
+export const selectProduct = (product) => {
   return {
-    type: "DELETETODO",
-    id,
-  };
-};
-export const updateTodo = (id, data) => {
-  return {
-    type: "UPDATETODO",
-    id,
-    data
-  };
-};
-export const removeTodo = () => {
-  return {
-    type: "REMOVETODO",
+    type: "SELECTPRODUCT",
+    payload: product,
   };
 };

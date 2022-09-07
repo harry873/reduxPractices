@@ -2,8 +2,10 @@
 // import Increment from "./components/Increment";
 // import Input from "./components/Input";
 // import Reset from "./components/Reset";
-import TodoPage from "./pages/TodoPage";
-
+import Product from "./pages/Product";
+// import TodoPage from "./pages/TodoPage";
+import { Routes, Route } from "react-router-dom";
+import ProductDetails from "./components/ProductDetails";
 function App() {
   return (
     <div>
@@ -15,9 +17,12 @@ function App() {
       <div className="pt-4" >
         <Reset />
       </div> */}
-      <div className="container ">
-        <TodoPage />
-      </div>
+
+      {/* <TodoPage /> */}
+      <Routes>
+        <Route path="/" element={<Product />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
     </div>
   );
 }
